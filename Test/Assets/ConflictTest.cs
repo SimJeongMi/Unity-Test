@@ -24,11 +24,12 @@ public class ConflictTest : MonoBehaviour
         {
             if (isHarin)
             {
-                print("isHarin Ture");
+                print("isHarin True");
             }
             if (isJeongMi)
             {
                 print("isJeongMi True");
+                print("참으로 눌렸다ㅏㅏ");
             }
         }
     }
