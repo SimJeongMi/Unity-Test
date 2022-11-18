@@ -29,7 +29,11 @@ public class ConflictTest : MonoBehaviour
             if (isJeongMi)
             {
                 print("isJeongMi True");
+<<<<<<< Updated upstream
                 print("참으로 눌렸다ㅏㅏ");
+=======
+                print(" 나는 정미");
+>>>>>>> Stashed changes
             }
         }
     }
