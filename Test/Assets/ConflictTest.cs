@@ -25,6 +25,7 @@ public class ConflictTest : MonoBehaviour
             if (isHarin)
             {
                 print("isHarin Ture");
+                print("안녕 난 하린이야");
             }
             if (isJeongMi)
             {
