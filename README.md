@@ -41,10 +41,14 @@ https://www.youtube.com/watch?v=e9D8W78ZgZ4
 **constraints**
 
     freeze position, freeze rotation 
+    
     체크한 부분에 대해서 연산하지 않는다.
 #
 ## Layer
 ![캡처2](https://user-images.githubusercontent.com/86524081/202973327-5490e8bb-16c7-4ad5-a3c3-1ef628c6c8f4.PNG)
-     레이어는 씬의 일부분만을 렌더링 하거나, 물리적 충돌을 판정하는 데 사용됨
+
+    레이어는 씬의 일부분만을 렌더링 하거나, 물리적 충돌을 판정하는 데 사용됨
 ####
-    이번 프로젝트에서는 레이가 바닥에 닿았는지를 판정하기 위해 Ground라는 임의의 레이어를 지정해주었음
+    이번 시간에는 레이가 바닥에 닿았는지를 판정하기 위해 Ground라는 임의의 레이어를 지정해주었다.
+    
+    카메라의 Culling Mask에서 체크해제한 Layer는 렌더링되지 않는다. 씬뷰에서는 보인다.
