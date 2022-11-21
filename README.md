@@ -4,6 +4,7 @@
 https://www.youtube.com/watch?v=e9D8W78ZgZ4
 ####
     캐릭터의 이동/점프/대시를 구현하고 Rigidbody에 대해 알아봅니다.
+    씬 경로 : Assets/HR/0.Scenes/CharacterMovement
 #
 ## Rigidbody 컴포넌트
 ![캡처](https://user-images.githubusercontent.com/86524081/202970747-349b56f7-20ae-4247-b544-cce7935385e7.PNG)
