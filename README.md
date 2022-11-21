@@ -53,9 +53,9 @@ https://www.youtube.com/watch?v=e9D8W78ZgZ4
     
     카메라의 Culling Mask에서 체크해제한 Layer는 렌더링되지 않는다. 씬뷰에서는 보인다.
 #
-## Pivot
-![캡처4](https://user-images.githubusercontent.com/86524081/202975500-35a109e8-6275-4d14-bbcc-e53c1e239cb0.PNG)
+## Pivot 위치 변경
 ![캡처3](https://user-images.githubusercontent.com/86524081/202976148-b7a775fd-6582-469e-b344-235d7ab2951a.PNG)
+![캡처4](https://user-images.githubusercontent.com/86524081/202975500-35a109e8-6275-4d14-bbcc-e53c1e239cb0.PNG)
 
     Capsule로 캐릭터 생성 시, 빈 오브젝트를 부모로 상속받아 피봇 위치를 조정해주도록 한다.
     캡슐은 피봇이 중앙에 있기 때문에 y 포지션을 0으로 주면 땅바닥에 파묻힌 모양이 된다.
