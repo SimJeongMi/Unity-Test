@@ -15,10 +15,23 @@ public class PlayerMove : MonoBehaviour
     private bool ground = false;
     public LayerMask layer;
 
+    public int jumpCount = 2; // 2단 점프를 위한 변수
+
     // Start is called before the first frame update
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
+    }
+
+    // 플레이어가 땅에 닿았는지를 체크하기 위함
+    private void OnCollisionEnter(Collision collision)
+    {
+        // 땅에 닿았다면 점프횟수를 2로 초기화
+        if (collision.gameObject.tag == "Ground")
+        {
+            Debug.Log("땅에 닿았음");
+            jumpCount = 2;
+        }
     }
 
     // Update is called once per frame
@@ -30,17 +43,22 @@ public class PlayerMove : MonoBehaviour
 
         CheckGround();
 
-        if (Input.GetButtonDown("Jump") && ground)
+        if (jumpCount > 0)
         {
-            Vector3 jumpPower = Vector3.up * jumpHeight;
-            rigidbody.AddForce(jumpPower, ForceMode.VelocityChange);
+            if (Input.GetButtonDown("Jump")) // 버튼을 누르고 있는 동안 계속
+            {
+                Vector3 jumpPower = Vector3.up * jumpHeight;
+                rigidbody.AddForce(jumpPower, ForceMode.VelocityChange);
+                jumpCount--; // 점프 할 때마다 점프카운트가 1씩 깎인다
+                Debug.Log("남은 점프 횟수는? " + jumpCount);
+            }
         }
 
         // Rigidbody 컴포넌트의 Drag 값이 0 인 채로 다음 코드를 실행하면
         // rigidbody.force assign attempt for 'Player' is not valid. Input force is { -Infinity, -Infinity, -Infinity }.
         // 라는 오류가 나타난다.
         // 인스펙터창에서 Drag 값을 5 정도로 높여주면 된다.
-        if (Input.GetButtonDown("Dash"))
+        if (Input.GetButton("Dash"))
         {
             Vector3 dashPower = transform.forward * -Mathf.Log(1 / rigidbody.drag) * dash;
             rigidbody.AddForce(dashPower, ForceMode.VelocityChange);
@@ -59,7 +77,6 @@ public class PlayerMove : MonoBehaviour
             // Time.deltaTime만 사용하면 너무 느려서 rotSpeed를 곱해준다.
             transform.forward = Vector3.Lerp(transform.forward, dir, rotSpeed * Time.deltaTime);
         }
-
         rigidbody.MovePosition(this.gameObject.transform.position + dir * speed * Time.deltaTime);
     }
 
@@ -72,7 +89,6 @@ public class PlayerMove : MonoBehaviour
         if (Physics.Raycast(transform.position + (Vector3.up * 0.2f), Vector3.down, out hit, 0.4f, layer))
         {
             ground = true;
-
             Debug.DrawRay(transform.position + (Vector3.up * 0.2f), Vector3.down * hit.distance, Color.red);
         }
         else
@@ -81,3 +97,4 @@ public class PlayerMove : MonoBehaviour
         }
     }
 }
+
