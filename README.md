@@ -1,5 +1,5 @@
 # Chapter 1. 캐릭터 이동 
-**
+***
 ## [참고자료] Rigidbody로 캐릭터 움직임 구현
 https://www.youtube.com/watch?v=e9D8W78ZgZ4
 ####
