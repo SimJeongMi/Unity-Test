@@ -6,7 +6,7 @@ https://www.youtube.com/watch?v=e9D8W78ZgZ4
 #
 ## Rigidbody 컴포넌트
 ***
-    ![캡처](https://user-images.githubusercontent.com/86524081/202970747-349b56f7-20ae-4247-b544-cce7935385e7.PNG)
+![캡처](https://user-images.githubusercontent.com/86524081/202970747-349b56f7-20ae-4247-b544-cce7935385e7.PNG)
 
     이하린(PM), 나석주(PL), 조민혁, 박창신, 심대성
 #
