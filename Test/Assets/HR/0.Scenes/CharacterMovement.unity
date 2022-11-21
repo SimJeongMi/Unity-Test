@@ -432,7 +432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   jumpHeight: 5
-  dash: 10
+  dash: 3
   rotSpeed: 10
   layer:
     serializedVersion: 2
