@@ -14,7 +14,7 @@ https://www.youtube.com/watch?v=e9D8W78ZgZ4
 
 **angular drag**
 
-    회전저항(커질수록 회전할 때 더 오래 걸린다.)
+    회전저항 (커질수록 회전할 때 더 오래 걸린다.)
 
 **use gravity**
 
@@ -37,5 +37,3 @@ https://www.youtube.com/watch?v=e9D8W78ZgZ4
     freeze position, freeze rotation 
     체크한 부분에 대해서 연산하지 않는다.
     
-#
-## 주요기능
