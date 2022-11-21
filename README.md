@@ -5,7 +5,7 @@ https://www.youtube.com/watch?v=e9D8W78ZgZ4
 ####
     캐릭터의 이동/점프/대시를 구현하고 Rigidbody에 대해 알아봅니다.
 ####
-Assets/HR/0.Scenes/CharacterMovement
+    Assets/HR/0.Scenes/CharacterMovement
 #
 ## Rigidbody 컴포넌트
 ![캡처](https://user-images.githubusercontent.com/86524081/202970747-349b56f7-20ae-4247-b544-cce7935385e7.PNG)
@@ -42,4 +42,9 @@ Assets/HR/0.Scenes/CharacterMovement
 
     freeze position, freeze rotation 
     체크한 부분에 대해서 연산하지 않는다.
-    
+#
+## Layer
+![캡처2](https://user-images.githubusercontent.com/86524081/202973327-5490e8bb-16c7-4ad5-a3c3-1ef628c6c8f4.PNG)
+     레이어는 씬의 일부분만을 렌더링 하거나, 물리적 충돌을 판정하는 데 사용됨
+####
+    이번 프로젝트에서는 레이가 바닥에 닿았는지를 판정하기 위해 Ground라는 임의의 레이어를 지정해주었음
